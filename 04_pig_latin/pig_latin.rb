@@ -1,17 +1,19 @@
 def translate string
   c = string[0]
-  if c.is_vowel == true
+  first_letter = string[0]
+  second_letter = string[1]
+  if is_vowel(c) == true
      s = string + "ay"
     return s
   else
-    if first_letter.is_vowel != true and second_letter.is_vowel != true
+    if is_vowel(first_letter) != true and is_vowel(second_letter) != true
       consonants = first_letter + second_letter
       pig_suffix = consonants + "ay"
       string[0] = ''
-      string[1] = ''
+      string[0] = ''
       s = string + pig_suffix
       return s
-    elsif first_letter.is_vowel != true
+    elsif is_vowel(first_letter) != true
       consonant = first_letter
       pig_suffix = first_letter + "ay"
       string[0] = ''
