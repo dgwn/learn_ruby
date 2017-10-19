@@ -1,10 +1,14 @@
-def translate string
+def multiword_translate(string)
+
+end
+
+def translate(string)
   c = string[0]
   first_letter = string[0]
   second_letter = string[1]
   if is_vowel(c) == true
      s = string + "ay"
-    return s
+     return s
   else
     if is_vowel(first_letter) != true and is_vowel(second_letter) != true
       consonants = first_letter + second_letter
@@ -34,4 +38,4 @@ def is_vowel(character)
   end
 end
 
-translate("apple")
+puts translate("crabapple snoop")
